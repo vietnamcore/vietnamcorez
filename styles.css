@@ -1,0 +1,62 @@
+/* General reset */
+*{box-sizing:border-box}
+html,body,#root{height:100%}
+body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;color:#0b1320;background:#f6f9ff;-webkit-font-smoothing:antialiased}
+
+/* App container */
+.app{max-width:480px;margin:12px auto;padding:14px}
+.top{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px}
+.left .time{font-weight:700;color:#3b3f4a;font-size:14px}
+.left .title{font-size:18px;font-weight:800}
+.left .subtitle{font-size:12px;color:#6b7280}
+
+/* Cards */
+.main{display:flex;flex-direction:column;gap:12px}
+.card{background:linear-gradient(180deg, rgba(255,255,255,0.95), rgba(248,250,255,0.9));border-radius:16px;padding:14px;box-shadow:0 10px 24px rgba(9,30,66,0.06);border:1px solid rgba(14,22,40,0.03)}
+.row{display:flex;align-items:center;justify-content:space-between;padding:8px 0;border-bottom:1px dashed rgba(15,23,42,0.03)}
+.row.small{border-bottom:none;padding:6px 0}
+.h{font-weight:700}
+.muted{font-size:12px;color:#7b8794}
+
+/* Toggle */
+.switch{position:relative;width:56px;height:32px}
+.switch input{opacity:0;width:0;height:0}
+.slider{position:absolute;cursor:pointer;inset:0;background:linear-gradient(180deg,#eaf2ff,#ffffff);border-radius:999px;transition:all .22s;box-shadow:inset 0 1px 0 rgba(255,255,255,0.5)}
+.slider:before{content:"";position:absolute;left:4px;top:4px;width:24px;height:24px;border-radius:50%;background:white;transition:all .22s;box-shadow:0 8px 20px rgba(12,25,54,0.12)}
+.switch input:checked + .slider{background:linear-gradient(90deg,#3b82f6,#7c3aed)}
+.switch input:checked + .slider:before{transform:translateX(24px)}
+
+/* Slider rows */
+.slider-row{margin:6px 0}
+.label-row{display:flex;justify-content:space-between;font-size:13px;color:#39414a;margin-bottom:6px}
+input[type=range]{-webkit-appearance:none;width:100%;height:8px;border-radius:8px;background:linear-gradient(90deg, rgba(60,130,246,0.18), rgba(124,58,237,0.12));outline:none}
+input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:18px;height:18px;border-radius:50%;background:#fff;box-shadow:0 8px 20px rgba(43,107,228,0.16);border:3px solid rgba(255,255,255,0.6)}
+
+/* Actions */
+.actions{display:flex;flex-direction:column;gap:10px}
+.buttons{display:flex;gap:8px;flex-wrap:wrap}
+.btn{padding:10px 12px;border-radius:12px;border:none;background:white;box-shadow:0 8px 18px rgba(12,25,54,0.04);cursor:pointer;font-weight:700}
+.btn.primary{background:linear-gradient(90deg,#3b82f6,#7c3aed);color:white;box-shadow:0 14px 36px rgba(59,130,246,0.14)}
+.btn.file{position:relative;overflow:hidden}
+.btn.file input{position:absolute;left:0;top:0;opacity:0;width:100%;height:100%}
+
+/* preset row */
+.preset-row{display:flex;gap:8px;align-items:center;margin-top:6px}
+.select{padding:8px;border-radius:10px;border:1px solid rgba(15,23,42,0.06);background:white;font-weight:600}
+
+/* Footer */
+.footer{text-align:center;color:#6b7280;font-size:12px;margin-top:12px}
+
+/* Theme: galaxy (gradient background behind the app) */
+.app.galaxy{
+  background: radial-gradient(800px 400px at -10% 10%, rgba(124,58,237,0.12), transparent 10%),
+              radial-gradient(600px 300px at 110% 90%, rgba(59,130,246,0.10), transparent 12%);
+  border-radius:20px;
+  padding:18px;
+}
+
+/* Responsive tweaks */
+@media (max-width:420px){
+  .app{margin:6px;padding:12px}
+  .switch{width:52px;height:28px}
+}
