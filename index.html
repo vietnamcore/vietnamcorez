@@ -1,11 +1,117 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="vi">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Menu UI — Galaxy VIP</title>
-  </head>
-  <body>
-    <div id="root"></div>
-  </body>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu Free Fire VIP</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #000428, #004e92);
+      color: white;
+      text-align: center;
+    }
+    header {
+      padding: 20px;
+      font-size: 24px;
+      font-weight: bold;
+      background: rgba(0,0,0,0.3);
+      backdrop-filter: blur(5px);
+    }
+    .menu {
+      max-width: 400px;
+      margin: 20px auto;
+      padding: 20px;
+      background: rgba(255,255,255,0.1);
+      border-radius: 15px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.5);
+    }
+    .toggle {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 15px 0;
+      padding: 10px;
+      background: rgba(255,255,255,0.05);
+      border-radius: 10px;
+    }
+    .toggle label {
+      font-size: 16px;
+    }
+    input[type="checkbox"] {
+      width: 50px;
+      height: 25px;
+      -webkit-appearance: none;
+      background: #555;
+      outline: none;
+      border-radius: 25px;
+      position: relative;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    input[type="checkbox"]:checked {
+      background: #00ffcc;
+    }
+    input[type="checkbox"]::before {
+      content: '';
+      position: absolute;
+      width: 21px;
+      height: 21px;
+      border-radius: 50%;
+      top: 2px;
+      left: 2px;
+      background: #fff;
+      transition: 0.3s;
+    }
+    input[type="checkbox"]:checked::before {
+      transform: translateX(25px);
+    }
+    button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 10px;
+      font-size: 16px;
+      background: #00ffcc;
+      color: #000;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    button:hover {
+      background: #00ffaa;
+    }
+  </style>
+</head>
+<body>
+  <header>🔥 MENU FREE FIRE VIP GALAXY 🔥</header>
+  <div class="menu">
+    <div class="toggle">
+      <label>Aimbot VIP</label>
+      <input type="checkbox">
+    </div>
+    <div class="toggle">
+      <label>ESP Xuyên Tường</label>
+      <input type="checkbox">
+    </div>
+    <div class="toggle">
+      <label>Tâm Ảo Galaxy</label>
+      <input type="checkbox">
+    </div>
+    <div class="toggle">
+      <label>Tốc Độ Nhạy Siêu Cấp</label>
+      <input type="checkbox">
+    </div>
+    <div class="toggle">
+      <label>Auto Headshot</label>
+      <input type="checkbox">
+    </div>
+    <div class="toggle">
+      <label>Full HD Hiệu Ứng</label>
+      <input type="checkbox">
+    </div>
+    <button>Lưu Cài Đặt</button>
+  </div>
+</body>
 </html>
